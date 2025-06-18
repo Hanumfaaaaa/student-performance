@@ -1,4 +1,4 @@
 streamlit
 pandas
-scikit-learn 
+scikit-learn # Asumsi model Anda dibuat dengan scikit-learn
 numpy
