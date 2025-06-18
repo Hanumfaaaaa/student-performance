@@ -1,14 +1,14 @@
 import streamlit as st
 import pandas as pd
-import pickle
-import numpy as np
+import joblib
+
 
 # Fungsi untuk memuat model
 @st.cache_resource
 def load_model():
     try:
         with open('model_graduation.pkl', 'rb') as file:
-            model = pickle.load(file)
+            model = joblib.load(file)
         return model
     except FileNotFoundError:
         st.error("File 'model_graduation.pkl' tidak ditemukan. Pastikan model berada di direktori yang sama.")
